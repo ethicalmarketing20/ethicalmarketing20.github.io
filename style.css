@@ -14,6 +14,12 @@ body {
 	margin-top: -20px;
 }
 
+#blurb {
+	font-size: 8pt;
+	letter-spacing: 1px;
+	width: 425px;
+}
+
 #cover {
   display: none;
   top:0;
