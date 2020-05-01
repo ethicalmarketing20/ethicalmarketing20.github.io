@@ -15,9 +15,9 @@ body {
 }
 
 #blurb {
-	font-size: 8pt;
+	font-size: .6em;
 	letter-spacing: 1px;
-	width: 425px;
+	width: 24vw;
 }
 
 #cover {
