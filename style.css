@@ -6,15 +6,19 @@ body {
 	color: white;
 }
 
+#title {
+	line-height: 10px;
+}
+
 #sub {
-	margin-top: -30px;
 }
 
 #subsub {
-	margin-top: -20px;
+	margin-top: -10px;
 }
 
 #blurb {
+	line-height: 15px;
 	font-size: .6em;
 	letter-spacing: 1px;
 	width: 400px;
