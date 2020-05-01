@@ -6,6 +6,13 @@ body {
 	color: white;
 }
 
+::selection {
+  color: #de4e3f; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: #de4e3f; /* Gecko Browsers */
+}
+
 #title {
 	line-height: 10px;
 }
