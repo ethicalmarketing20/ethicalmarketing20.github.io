@@ -1,5 +1,17 @@
 body {
 	background-color: #000000;
+	font-family: 'Poppins Regular', sans-serif;
+	text-align: center;
+	letter-spacing: 3px;
+	color: white;
+}
+
+#sub {
+	margin-top: -30px;
+}
+
+#subsub {
+	margin-top: -20px;
 }
 
 #cover {
