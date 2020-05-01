@@ -129,20 +129,10 @@
         image.css("display", "none");
         $("#table").append(image);
         if(window.innerHeight < window.innerWidth){
-          if (image.width() > image.height()) {
-            image.css("width", "50vw");
-          }
-          else{
-            image.css("height", "75vh");
-          }
+          image.css("height", "90vh");
         }
         else {
-          if(image.width() >= image.height()){
-            image.css("width", "80vw");
-          }
-          else{
-            image.css("height", "75vh");
-          }
+          image.css("width", "90vw");
         }
         image.css({
           "z-index": "1000",
