@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>[EthiCAL Marketing]</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="images/heart.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- a majority of the code and base frame of the html/css comes from heidi erwin & cs130 at brown :-) -->
+</head>
+
+<body>
+
+<div id="cover"></div>
+<div class="content">
+    <div id="table">
+      <div id="cardwrapper">
+
+        <div class="space">
+          <div class="cardrow">
+            <div class="card" onmouseenter="showInfo(3)" onmouseleave="showCereal(3)">
+              <div class="front" id="box3" onmousedown="toggleBox(3, true)">
+                <img src="images/Stephanie Final.png" />
+              </div>
+              <div class="back" id="info3" style="display:none" onmousedown="toggleBox(3, false)">
+                <img class="image" src="images/Stephanie Back.png" />
+              </div>
+            </div>
+            <div class="card" onmouseenter="showInfo(4)" onmouseleave="showCereal(4)">
+              <div class="front" id="box4" onmousedown="toggleBox(4, true)">
+                <img src="images/Alyssa Final.png" />
+              </div>
+              <div class="back" id="info4" style="display:none" onmousedown="toggleBox(4, false)">
+                <img class="image" src="images/Alyssa Back.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="space">
+          <div class="cardrow">
+            <div class="card" onmouseenter="showInfo(5)" onmouseleave="showCereal(5)">
+              <div class="front" id="box5" onmousedown="toggleBox(5, true)">
+                <img src="images/Vicky Final.png" />
+              </div>
+              <div class="back" id="info5" style="display:none" onmousedown="toggleBox(5, false)">
+                <img class="image" src="images/Vicky Back.png" />
+              </div>
+            </div>
+            <div class="card" onmouseenter="showInfo(6)" onmouseleave="showCereal(6)">
+              <div class="front" id="box6" onmousedown="toggleBox(6, true)">
+                <img src="images/Sasha Final.png" />
+              </div>
+              <div class="back" id="info6" style="display:none" onmousedown="toggleBox(6, false)">
+                <img class="image" src="images/Sasha Back.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space">
+          <div class="cardrow">
+            <div class="card" onmouseenter="showInfo(7)" onmouseleave="showCereal(7)">
+              <div class="front" id="box7" onmousedown="toggleBox(7, true)">
+                <img src="images/Allen Final.png" />
+              </div>
+              <div class="back" id="info7" style="display:none" onmousedown="toggleBox(7, false)">
+                <img class="image" src="images/Allen Back.png" />
+              </div>
+            </div>
+            <div class="card" onmouseenter="showInfo(8)" onmouseleave="showCereal(8)">
+              <div class="front" id="box8" onmousedown="toggleBox(8, true)">
+                <img src="images/Grace Final.png" />
+              </div>
+              <div class="back" id="info8" style="display:none" onmousedown="toggleBox(8, false)">
+                <img class="image" src="images/Grace Back.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space">
+          <div class="cardrow">
+            <div class="card" onmouseenter="showInfo(9)" onmouseleave="showCereal(9)">
+              <div class="front" id="box9" onmousedown="toggleBox(9, true)">
+                <img src="images/Chelsie Final.png" />
+              </div>
+              <div class="back" id="info9" style="display:none" onmousedown="toggleBox(9, false)">
+                <img class="image" src="images/Chelsie Back.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+        </div>
+        <br>
+      </div>
+
+      <script>
+        function showInfo(x) {
+          const box = document.getElementById("box" + x);
+          const info = document.getElementById("info" + x);
+          info.style.display = "block";
+          box.style.display = "none";
+        }
+
+        function showCereal(x) {
+          const box = document.getElementById("box" + x);
+          const info = document.getElementById("info" + x);
+          info.style.display = "none";
+          box.style.display = "block";
+        }
+
+        function toggleBox(x, cerealShowing) {
+          if (cerealShowing === true) {
+            showInfo(x);
+            cerealShowing = false;
+          } else {
+          }
+        }
+
+        $('.back img').click(function(){
+        image = $(this).clone();
+        image.css("display", "none");
+        $("#table").append(image);
+        if(window.innerHeight < window.innerWidth){
+          if (image.width() > image.height()) {
+            image.css("width", "50vw");
+          }
+          else{
+            image.css("height", "75vh");
+          }
+        }
+        else {
+          if(image.width() >= image.height()){
+            image.css("width", "80vw");
+          }
+          else{
+            image.css("height", "75vh");
+          }
+        }
+        image.css({
+          "z-index": "1000",
+          "display": "block",
+          "position": "fixed",
+          "top": "50%",
+          "left": "50%",
+          "transform": "translate(-50%, -50%)"
+        });
+
+        $("#cover").css("display", 'none').fadeIn("slow");
+        image.css("display", 'none').fadeIn("slow");
+        });
+
+        $("#cover").click(function(){
+          $("#cover").css("display", 'block').fadeOut("slow");
+          image.css("display", 'block').fadeOut("slow").empty();
+        });
+      </script>
+    </div>
+  </div>
+  </body>

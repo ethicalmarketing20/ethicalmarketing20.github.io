@@ -1,0 +1,170 @@
+body {
+	background-color: #000000;
+}
+
+#cover {
+  display: none;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  height:100%;
+  width:100%;
+  position: fixed;
+  background-color: white;
+  opacity: 0.1;
+  z-index: 100;
+}
+
+.space {
+	justify-content: center;
+	margin: 30px 0px;
+	/* display: block; */
+	width: 100%;
+}
+
+.cardrow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+}
+
+.card {
+    height: 355px;
+    width: 242px;
+		margin: 10px;
+		text-align: center;
+    margin-bottom: 0;
+    background-color: white;
+    /* box-shadow: 1px 2px 5px rgba(255, 255, 255, 2); */
+	z-index: 99;
+	/* margin: auto; */
+}
+
+.front img {
+    margin: 0 !important;
+    width: 242px !important;
+		border-style: solid;
+		border-color: white;
+    /* box-shadow: 1px 2px 5px rgba(255, 255, 255, 2); */
+}
+
+.back {
+    position: relative;
+}
+
+.back img {
+    width: 242px;
+		border-style: solid;
+		border-color: white;
+}
+
+#cardwrapper, #hcardwrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px 0px;
+}
+
+/*@keyframes example {
+    0%  {color:black;}
+    50% {color: red;}
+    100% {color:black;}
+}*/
+
+@media only screen and (max-width: 1500px) {
+    .linkbox {
+        font-size: 12px;
+    }
+
+    #documentlinks {
+    	flex-direction: column;
+    	justify-content: center;
+    }
+    .documentlink {
+    	margin-top: 10px;
+    	margin-bottom: 10px;
+    	text-align: center;
+    }
+
+    #calendar {
+    	height: 400px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+    .linkbox {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .linkbox {
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+	.content {
+		width: 80%;
+	}
+
+    .linkbox {
+        display: none;
+    }
+
+    .header {
+    	width: 100%;
+    }
+
+    #labstable {
+    	width: 100%;
+    }
+
+    .documentlink a {
+    	font-size: 18px;
+    }
+
+    .back img {
+        width: 120px;
+    }
+
+    /* .front img {
+        width: 240px !important;
+    }
+    .card {
+        width: 240px;
+        height: 352px;
+    } */
+
+    .shelfwrapper img {
+		width: 100%;
+		margin: auto;
+		/* display: none; */
+	}
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 700px) {
+	.content {
+		width: 80%;
+	}
+
+    .linkbox {
+        display: none;
+    }
+
+    .header {
+    	width: 100%;
+    }
+
+    #labstable {
+    	width: 100%;
+    }
+
+    .documentlink a {
+    	font-size: 24px;
+    }
+}
